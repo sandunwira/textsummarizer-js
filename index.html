@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Text Summarization</title>
+
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.containerBlock {
+			padding: 40px 0;
+			gap: 30px;
+		}
+		.container {
+			width: 90%;
+			gap: 10px;
+		}
+
+		.flex {
+			display: flex;
+		}
+		.flexCol {
+			flex-direction: column;
+		}
+		.flexRow {
+			flex-direction: row;
+		}
+	</style>
+
+	<script src="summarizer.js"></script>
+	<script src="driver.js"></script>
+</head>
+
+<body>
+	<div class="containerBlock flex flexCol" style="align-items: center; justify-content: center;">
+		<div class="container flex flexCol">
+			<h1>Text Summarization</h1>
+			<p>Summarize your text with ease!</p>
+		</div>
+
+		<div class="container flex flexCol" style="justify-content: flex-start;">
+			<label for="input">Source Text:</label>
+			<textarea id="input" style="height: 200px;" placeholder="Insert the text to be summarized here..."></textarea>
+			<button id="summarizeButton" style="width: fit-content;">Summarize</button>
+		</div>
+
+		<div class="container flex flexCol" style="justify-content: flex-start;">
+			<label for="output">Summary:</label>
+			<p id="output">Expect the generated summary here...</p>
+		</div>
+	</div>
+</body>
+
+</html>
